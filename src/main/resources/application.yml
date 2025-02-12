@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: Deal With Me
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://z2cqjoHrupBJeymwLN6L4hnJbgafAFtP@dpg-cum7gnt6l47c73961nhg-a.singapore-postgres.render.com/dealwithme
+    username: pritishdhimole
+    password: dzxUQIH45L5q61TlC6M4ERDywAUCfUCD
+    driver-class-name: org.postgresql.Driver
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: pritishdhimole079@gmail.com
+    password: z2cqjoHrupBJeymwLN6L4hnJbgafAFtP
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  security:
+   user: 
+    name: admin
+    password: admin
+
+server:
+  port: 8080
+
+management:
+  security:
+    enabled: false
+
+
+
+security:
+  jwt:
+    secret-key: 9b7be6d56092d57bcc76a40511986a44d6584ca3d36cc59902af9bc4bd399e699729cb7a4af7ec1c108f50adb1b746eaf852ab1ae4fa5a2ee841a511cec3603fc0cc04747de40cdb41c9ea628e434406990463454bcb0ecea5bb53281e4f471b6f71341f3164710bb9aa3083501fd1bb3059c0f5f29d8f698f8d74e65927687ec203cdc850c74605b65ac81b789a77b7d9a651418abe400c361403e77ff31ac19375d815eb44516a25d4a61dbc0b6deb2d2e31a7398d5aa3f077667b6e230755fa03e73aca832e94cbfc1264ac8de3518ff7a17b9967a02407838709ab898b9d317544792127c65de5b321e8a4e2c2e388b00cfa835895f9e3551cad12848a62
+    expiration-time: 3600000
